@@ -1,0 +1,15 @@
+@startuml
+' 设置顺序图标题
+title Linux 工厂模式顺序图
+
+' 定义参与者
+actor Client
+participant ShapeFactory
+participant Circle
+
+' 绘制消息传递
+Client -> ShapeFactory: createShape("circle")
+ShapeFactory -> Circle: 创建实例
+Circle --> ShapeFactory: 返回实例
+ShapeFactory --> Client: 返回实例
+@enduml

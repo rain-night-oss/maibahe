@@ -1,0 +1,26 @@
+@startuml
+' 设置类图标题
+title Linux 工厂模式类图
+
+' 定义工厂类
+class ShapeFactory {
+    + createShape(type: String): Shape
+}
+
+' 定义抽象形状类
+abstract class Shape {
+    + draw()
+}
+
+' 定义具体形状类
+class Circle extends Shape {
+    + draw()
+}
+
+class Square extends Shape {
+    + draw()
+}
+
+' 定义类之间的关系
+ShapeFactory --> Shape : creates
+@enduml
